@@ -16,32 +16,41 @@ namespace ExercisesUnitTests.UnitTests
             Assert.AreEqual("Odd", SolutionClass.EvenOrOdd(-1));
         }
 
-        //[Test, Description("should fire the cannons when ready")]
-        //public void SampleAyeTest()
-        //{
-        //    Dictionary<string, string> gunners = new Dictionary<string, string>
-        //    {
-        //      {"Mike", "aye"},
-        //      {"Joe", "aye"},
-        //      {"Johnson", "aye"},
-        //      {"Peter", "aye"}
-        //    };
+        [Test, Description("should fire the cannons when ready")]
+        public void SampleAyeTest()
+        {
+            Dictionary<string, string> gunners = new Dictionary<string, string>
+            {
+              {"Mike", "aye"},
+              {"Joe", "aye"},
+              {"Johnson", "aye"},
+              {"Peter", "aye"}
+            };
 
-        //    Assert.AreEqual("Fire!", Pirates.CannonsReady(gunners));
-        //}
+            Assert.AreEqual("Fire!", Pirates.CannonsReady(gunners));
+        }
 
-        //[Test, Description("should shiver me timbers if not ready")]
-        //public void SampleNayTest()
-        //{
-        //    Dictionary<string, string> gunners = new Dictionary<string, string>
-        //    {
-        //      {"Mike", "aye"},
-        //      {"Joe", "nay"},
-        //      {"Johnson", "aye"},
-        //      {"Peter", "aye"}
-        //    };
+        [Test, Description("should shiver me timbers if not ready")]
+        public void SampleNayTest()
+        {
+            Dictionary<string, string> gunners = new Dictionary<string, string>
+            {
+              {"Mike", "aye"},
+              {"Joe", "nay"},
+              {"Johnson", "aye"},
+              {"Peter", "aye"}
+            };
 
-        //    Assert.AreEqual("Shiver me timbers!", Pirates.CannonsReady(gunners));
-        //}
+            Assert.AreEqual("Shiver me timbers!", Pirates.CannonsReady(gunners));
+        }
+
+        [Test]
+        public void BasicTests()
+        {
+            Assert.AreEqual("Z", Kata.Battle("AAA", "Z"));
+            Assert.AreEqual("TWO", Kata.Battle("ONE", "TWO"));
+            Assert.AreEqual("Tie!", Kata.Battle("ONE", "NEO"));
+            Assert.AreEqual("FOUR", Kata.Battle("FOUR", "FIVE"));
+        }
     }
 }
